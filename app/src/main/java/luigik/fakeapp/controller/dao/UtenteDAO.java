@@ -22,8 +22,8 @@ public class UtenteDAO extends PhpDAO<Utente> {
     @Override
     public void insert(Utente toInsert) throws IOException {
         String query = INSERT_QUERY +
-                toInsert.getId() + "," +
-                "\"" + toInsert.getNome() + ",\"" +
+                "\"" + toInsert.getId() + "\"," +
+                "\"" + toInsert.getNome() + "\"," +
                 "\"" + toInsert.getCognome() + "\")";
         URLUtil.getResponseFromURL(getConnection(query));
     }

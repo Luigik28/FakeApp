@@ -211,7 +211,11 @@ public class MainActivity extends AppCompatActivity {
         BuildAlertMotivazioni(int position) {
             this.position = position;
             this.item = (String) chooserMese.getSelectedItem();
-            sett = chooserSett.getSelectedItemPosition();
+            try {
+                sett = Integer.valueOf((String) chooserSett.getSelectedItem());
+            } catch (NumberFormatException e) {
+                sett = null;
+            }
         }
 
         @Override

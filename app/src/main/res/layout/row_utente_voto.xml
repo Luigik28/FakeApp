@@ -7,6 +7,7 @@
         android:layout_width="100sp"
         android:layout_height="100sp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:id="@+id/profileImage"
         android:contentDescription="Immagine di profilo"
@@ -16,6 +17,7 @@
         android:layout_width="100sp"
         android:layout_height="100sp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:id="@+id/progress_bar"
         android:visibility="visible"/>
@@ -24,7 +26,9 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_toEndOf="@+id/profileImage"
+        android:layout_toRightOf="@+id/profileImage"
         android:layout_alignBottom="@+id/profileImage"
         android:orientation="vertical"
         android:id="@+id/dati">
@@ -42,16 +46,17 @@
 
     <EditText
         android:id="@+id/motivazioni"
-        android:textSize="20sp"
-        android:hint="Puoi scrivere qui le tue motivazioni"
-        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/profileImage"
-        android:ems="10"
-        android:inputType="textMultiLine" />
+        android:hint="Puoi scrivere qui le tue motivazioni"
+        android:inputType="textAutoCorrect|textShortMessage"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
 
 </RelativeLayout>
